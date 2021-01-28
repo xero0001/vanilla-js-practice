@@ -1,3 +1,110 @@
+:root {
+  /* global */
+  --size-1: 4px;
+  --size-2: 8px;
+  --size-3: 12px;
+  --size-4: 16px;
+  --size-6: 24px;
+  --size-8: 32px;
+  --size-10: 40px;
+  --size-12: 48px;
+  --size-16: 64px;
+  --size-32: 128px;
+  --size-64: 256px;
+
+  /* header */
+  --logo-size: 32px;
+  --logo-margin: 16px;
+  --menu-margin: 16px;
+  --menu-padding: 16px;
+
+  /* body */
+  /* --menu-padding: 75px; */
+
+  /* footer */
+
+  /* colors */
+  --white: white;
+  --black: black;
+}
+
 * {
   font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+#navbar {
+  position: absolute;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  box-sizing: border-box;
+  padding-left: var(--size-4);
+  padding-right: var(--size-4);
+  padding-top: var(--size-4);
+  padding-bottom: var(--size-4);
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__logo img {
+  width: var(--logo-size);
+  height: var(--logo-size);
+}
+
+.navbar__logo a {
+  color: var(--white);
+  margin-left: var(--logo-margin);
+  font-size: var(--logo-size);
+  line-height: var(--logo-size);
+}
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.navbar__menu__item {
+  margin-left: var(--menu-margin);
+  margin-right: var(--menu-margin);
+  padding: var(--menu-padding);
+  font-size: var(--size-6);
+  line-height: var(--size-6);
+  color: var(--white);
+  text-decoration: none;
+}
+
+.navbar__menu__item a {
+  color: inherit;
+}
+
+.navbar__menu__item.selected {
+  border: 1px solid var(--white);
+  border-radius: var(--size-1);
+}
+
+#home {
+  background-image: url("imgs/greetings_bg.png");
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  background-size: cover;
+  padding-top: var(--menu-padding);
+  padding-bottom: var(--size-16);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--white);
 }
